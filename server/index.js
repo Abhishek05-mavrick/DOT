@@ -12,7 +12,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, '..')));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "form.html"));
+  res.sendFile(path.join(__dirname, "form.html"));
 });
 
 const SUPABASE_URL = process.env.SUPABASE_URL || 'https://eorwvuivppmyzavvuquo.supabase.co';
