@@ -11,6 +11,9 @@ const path = require('path');
 // Serve static files from the project root so you can open http://localhost:3000/form.html
 app.use(express.static(path.join(__dirname, '..')));
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "form.html"));
+});
 
 const SUPABASE_URL = process.env.SUPABASE_URL || 'https://eorwvuivppmyzavvuquo.supabase.co';
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
